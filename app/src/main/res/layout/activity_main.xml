@@ -28,11 +28,20 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:text="@string/enter_meal_total"
+                android:textSize="@dimen/default_font_size"
                 />
 
-
+            <EditText
+                android:id="@+id/preTipMealTotalEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/enter_meal_total"
+                android:inputType="numberDecimal"
+                android:textSize="@dimen/default_font_size" />
         </TableRow>
 
+        <!-- this is the second row, getting the user to select the tip % -->
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent" >
@@ -40,9 +49,22 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:text="@string/select_tip_percent"
+                android:textSize="@dimen/default_font_size"
                 />
+
+            <SeekBar
+                android:id="@+id/tipPercentSeekBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tipPrecentTextView"
+                android:layout_width="wrap_content"
+                tools:text="15%"
+                android:textSize="@dimen/default_font_size"/>
         </TableRow>
 
+        <!--3rd row - show how much tip is required -->
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent" >
@@ -50,9 +72,17 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:text="@string/tip_total"
-                />
+                android:textSize="@dimen/default_font_size"  />
+
+            <TextView
+                android:id="@+id/finalTipAmountTextView"
+                android:layout_width="wrap_content"
+                android:textAlignment="textEnd"
+                tools:text="$15.00"
+                android:textSize="@dimen/default_font_size"  />
         </TableRow>
 
+        <!-- 4th row - total meal cost with tip-->
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent" >
@@ -60,18 +90,19 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:text="@string/total_amount_to_pay"
+                android:textSize="@dimen/default_font_size"
+                />
+            <TextView
+                android:id="@+id/totalMealCostTextView"
+                android:layout_width="wrap_content"
+                android:textAlignment="textEnd"
+                tools:text="$115.00"
+                android:textSize="@dimen/default_font_size"
                 />
         </TableRow>
     </TableLayout>
 
-    <EditText
-        android:id="@+id/preTipMealTotalEditText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="numberDecimal"
-        tools:layout_editor_absoluteX="4dp"
-        tools:layout_editor_absoluteY="245dp" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
