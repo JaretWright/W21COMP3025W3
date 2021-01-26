@@ -1,5 +1,6 @@
 package com.example.w21comp3025w3
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -16,6 +17,11 @@ class MainActivity : AppCompatActivity() {
 
         Log.i("LifeCycle", "MainActivity.onCreate() method")
 
+        //if the Button is pushed, change to the second activity
+        binding.changeActivityButton.setOnClickListener {
+            var intent = Intent(this, SecondActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     override fun onStart(){
