@@ -59,7 +59,10 @@
             <SeekBar
                 android:id="@+id/tipPercentSeekBar"
                 android:layout_width="@dimen/seekbar_width"
-                android:layout_height="@dimen/view_height"/>
+                android:layout_height="@dimen/view_height"
+                android:max="20"
+                android:progress="15"
+                android:layout_gravity="center_vertical"/>
 
             <TextView
                 android:id="@+id/tipPrecentTextView"
